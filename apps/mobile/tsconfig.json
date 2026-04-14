@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "types": ["react-native"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "references": [{ "path": "../../packages/pictures" }],
+  "include": ["index.ts", "App.tsx", "src/**/*.ts", "src/**/*.tsx"]
+}

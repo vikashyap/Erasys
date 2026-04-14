@@ -1,0 +1,21 @@
+{
+  "name": "@erasys/mobile",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "build": "pnpm typecheck",
+    "dev": "expo start",
+    "lint": "eslint . --ext .ts,.tsx",
+    "start": "expo start",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@erasys/pictures": "workspace:*",
+    "@tanstack/react-query": "^5.90.12",
+    "expo": "^54.0.0",
+    "react": "^19.1.0",
+    "react-native": "^0.81.5",
+    "react-native-safe-area-context": "~5.6.0"
+  }
+}
