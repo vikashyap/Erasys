@@ -97,6 +97,26 @@ pnpm --filter @erasys/pictures build
 pnpm --filter @erasys/ui build
 ```
 
+## Performance Snapshot
+
+Measured after a production build.
+
+| App | Lighthouse Performance | Notes |
+| --- | --- | --- |
+| Next.js SSR | 97 | Cached shell with streamed server-rendered gallery |
+| SPA | 95 | React Query with client-rendered gallery |
+
+The scores are close because the apps were intentionally kept visually and structurally similar.
+
+Local DevTools metrics from the built app:
+
+- Largest Contentful Paint: 0.14 s
+- Cumulative Layout Shift: 0
+- Interaction to Next Paint: 0 ms
+- First Contentful Paint: 0.8 s
+- Total Blocking Time: 120 ms
+- Speed Index: 0.8 s
+
 ## Notes
 
 - The shared `packages/pictures` module powers the gallery data across all apps.
