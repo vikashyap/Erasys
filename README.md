@@ -43,6 +43,15 @@ pnpm --filter @erasys/spa dev
 pnpm --filter @erasys/mobile dev
 ```
 
+To try the Expo app on a phone:
+
+1. install the Expo Go app on your device
+2. run `pnpm --filter @erasys/mobile dev`
+3. scan the QR code from the terminal or Metro window
+4. open the app in Expo Go on your phone
+
+If you prefer an emulator, you can use the Expo commands shown in the terminal instead of scanning the QR code.
+
 SPA preview serves the built app, so build it first:
 
 ```bash
