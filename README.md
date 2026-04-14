@@ -123,6 +123,22 @@ Local DevTools metrics from the built app:
 - The shared `packages/ui` package holds the reusable layout and typography primitives.
 - The SPA uses a Vite dev proxy for the gallery API, while the Next app fetches on the server.
 
+## Infrastructure & Tooling
+
+The project includes the supporting setup needed to keep the apps consistent:
+
+- Turbo for monorepo task orchestration and caching
+- pnpm workspaces for package management
+- Next.js app router with SSR, ISR, and streaming
+- Vite for the SPA and a local API proxy for gallery data
+- Expo for the React Native app
+- shared `packages/pictures` for normalized gallery data
+- shared `packages/ui` for reusable layout and typography primitives
+- package-level `build`, `test`, `typecheck`, and `lint` scripts
+- Lighthouse and accessibility checks for the web apps
+
+This setup keeps the repo easy to run locally while still showing how the same data and UI patterns can be shared across web and mobile.
+
 ## Next.js rendering model
 
 The Next app uses a hybrid server-rendering setup:
